@@ -40,11 +40,13 @@ export const findByName = async (name) => {
     return await collection.find({name: {$regex: `^${name}$`, $options: 'i'}}).toArray();
 }
 
-// export const countByNames = (names) => {
-//     names = names.map(name => name.toLowerCase());
-//     return Array.from(students.values()).filter(s => names.includes(s.name.toLowerCase())).length;
-// }
-//
-// export const findByMinScore = (exam, minScore) => {
-//     return Array.from(students.values()).filter(s => s.scores[exam] >= minScore);
-// }
+export const countByNames = async (names) => {
+    const regexConditions = names.map(name => ({
+        name: {$regex: `^${name}$`, $options: 'i'}
+    }));
+    return await collection.countDocuments({$or: regexConditions});
+}
+
+export const findByMinScore = async (exam, minScore) => {
+    return await collection.find({[`scores.${exam}`]: {$gte: minScore}}).toArray();
+}

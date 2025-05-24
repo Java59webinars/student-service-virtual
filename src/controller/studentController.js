@@ -57,14 +57,14 @@ export const findByName = async (req, res) => {
     res.json(students);
 }
 
-// export const countByNames = (req, res) => {
-//     const names = req.query.names;
-//     const list = Array.isArray(names) ? names : [names];
-//     const count = repo.countByNames(list);
-//     res.json(count)
-// }
-//
-// export const findByMinScore = (req, res) => {
-//     const students = repo.findByMinScore(req.params.exam, +req.params.minScore);
-//     res.json(students);
-// }
+export const countByNames = async (req, res) => {
+    const names = req.query.names;
+    const list = Array.isArray(names) ? names : [names];
+    const count = await repo.countByNames(list);
+    res.json(count)
+}
+
+export const findByMinScore = async (req, res) => {
+    const students = await repo.findByMinScore(req.params.exam, +req.params.minScore);
+    res.json(students);
+}
