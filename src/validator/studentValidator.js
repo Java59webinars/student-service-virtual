@@ -3,7 +3,10 @@ import Joi from "joi";
 export const studentSchema = Joi.object({
     id: Joi.number().required(),
     name: Joi.string().required(),
-    password: Joi.string().required()
+    password: Joi.string().required(),
+    scores: Joi.object()
+    .pattern(Joi.string(), Joi.number().min(0).max(100))
+    .default({})
 })
 
 export const updateStudentSchema = Joi.object({

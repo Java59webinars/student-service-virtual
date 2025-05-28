@@ -1,11 +1,13 @@
 import * as repo from '../repository/studentRepository.js'
 
-export const addStudent = async ({id, name, password}) => {
+export const addStudent = async ({id, name, password, scores}) => {
     const existing = await repo.findStudentById(id);
     if (existing) {
         return false;
     }
-    await repo.createStudent({_id: id, name, password});
+    await repo.createStudent({_id: id, name, password, scores}).catch(err => {
+        console.error(err);
+    })
     return true;
 }
 

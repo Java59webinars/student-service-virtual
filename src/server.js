@@ -2,12 +2,17 @@ import dotenv from "dotenv";
 import express from 'express';
 import mongoose from "mongoose";
 import studentRoutes from "./routes/studentRoutes.js";
+import morgan from "morgan";
+import logger from "./logger/logger.js";
 
 dotenv.config();
 
 const app = express();
 const port = 8080;
-
+const stream = {
+    write: (message) => logger.http(message)
+}
+app.use(morgan('combined', {stream}));
 app.use(express.json());
 app.use(studentRoutes);
 app.use((req, res) => {
@@ -19,12 +24,12 @@ async function startServer() {
         await mongoose.connect(process.env.MONGO_URI, {
             dbName: 'java59'
         });
-        console.log("Connected to MongoDB");
+        logger.info("Connected to MongoDB");
         app.listen(port, () => {
-            console.log(`Server started on port ${port}. Press Ctrl-C to finish`);
+            logger.info(`Server started on port ${port}. Press Ctrl-C to finish`);
         })
     } catch (err) {
-        console.log('Failed to connect to MongoDB', err);
+        logger.error('Failed to connect to MongoDB', err);
     }
 }
 
