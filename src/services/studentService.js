@@ -12,15 +12,27 @@ export const addStudent = async ({id, name, password, scores}) => {
 }
 
 export const findStudent = async (id) => {
-    return await repo.findStudentById(id);
+    const student = await repo.findStudentById(id);
+    if (student) {
+        student.password = undefined;
+    }
+    return student
 }
 
 export const deleteStudent = async (id) => {
-    return await repo.deleteStudentById(id);
+    const student = await repo.deleteStudentById(id);
+    if (student) {
+        student.password = undefined;
+    }
+    return student;
 }
 
 export const updateStudent = async (id, data) => {
-    return await repo.updateStudent(id, data);
+    const student =await repo.updateStudent(id, data);
+    if (student) {
+        student.password = undefined;
+    }
+    return student
 }
 
 export const addScore = async (id, exam, score) => {
@@ -28,7 +40,11 @@ export const addScore = async (id, exam, score) => {
 }
 
 export const findByName = async (name) => {
-    return await repo.findStudentsByName(name);
+    const students = await repo.findStudentsByName(name);
+    return students
+        .map(student => {
+        student.password = undefined;
+    });
 }
 
 export const countByNames = async (names) => {

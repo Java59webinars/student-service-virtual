@@ -89,3 +89,47 @@
 
 [2025-05-28T18:55:48.015Z] info: Connected to MongoDB
 [2025-05-28T18:55:48.016Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T10:59:54.903Z] info: Connected to MongoDB
+[2025-06-01T10:59:54.905Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:00:19.124Z] http: ::1 - - [01/Jun/2025:11:00:19 +0000] "POST /student HTTP/1.1" 409 8 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:02:26.301Z] http: ::1 - - [01/Jun/2025:11:02:26 +0000] "GET /student/9000 HTTP/1.1" - - "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:02:54.313Z] http: ::1 - - [01/Jun/2025:11:02:54 +0000] "GET /student/9000 HTTP/1.1" - - "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:03:15.959Z] info: Connected to MongoDB
+[2025-06-01T11:03:15.960Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:03:54.434Z] http: ::1 - - [01/Jun/2025:11:03:54 +0000] "GET /student/9000 HTTP/1.1" - - "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:04:03.607Z] info: Connected to MongoDB
+[2025-06-01T11:04:03.608Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:04:17.508Z] http: ::1 - - [01/Jun/2025:11:04:17 +0000] "POST /student HTTP/1.1" 409 8 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:06:09.326Z] info: Connected to MongoDB
+[2025-06-01T11:06:09.328Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:06:20.566Z] http: ::1 - - [01/Jun/2025:11:06:20 +0000] "GET /student/9000 HTTP/1.1" 200 95 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:07:36.777Z] info: Connected to MongoDB
+[2025-06-01T11:07:36.779Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:07:55.837Z] http: ::1 - - [01/Jun/2025:11:07:55 +0000] "GET /student/9000 HTTP/1.1" 200 95 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:09:27.995Z] info: Connected to MongoDB
+[2025-06-01T11:09:27.997Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:09:32.075Z] http: ::1 - - [01/Jun/2025:11:09:32 +0000] "GET /student/9000 HTTP/1.1" 200 95 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:09:53.075Z] http: ::1 - - [01/Jun/2025:11:09:53 +0000] "PATCH /student/9000 HTTP/1.1" - - "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:11:35.991Z] info: Connected to MongoDB
+[2025-06-01T11:11:35.993Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:11:41.616Z] http: ::1 - - [01/Jun/2025:11:11:41 +0000] "PATCH /student/9000 HTTP/1.1" 200 95 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:13:28.314Z] info: Connected to MongoDB
+[2025-06-01T11:13:28.315Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:16:43.677Z] http: ::1 - - [01/Jun/2025:11:16:43 +0000] "PATCH /student/9000 HTTP/1.1" 200 82 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:21:27.682Z] info: Connected to MongoDB
+[2025-06-01T11:21:27.683Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-01T11:27:04.968Z] http: ::1 - - [01/Jun/2025:11:27:04 +0000] "GET /student/9000 HTTP/1.1" 200 156 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-01T11:27:45.334Z] info: Connected to MongoDB
+[2025-06-01T11:27:45.335Z] info: Server started on port 8080. Press Ctrl-C to finish
