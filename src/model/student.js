@@ -3,9 +3,9 @@ import bcrypt from "bcrypt";
 import logger from "../logger/logger.js";
 
 const studentSchema = new mongoose.Schema({
-    _id: {type: Number, required: true},
-    name: {type: String, required: true},
-    password: {type: String, required: true},
+    _id: {type: Number, required: true, min: [100000000, 'ID must be greater than 100000000'], max:[999999999, 'ID must be less than 999999999']},
+    name: {type: String, required: true, minlength: 3, maxlength: 50},
+    password: {type: String, required: true, minlength: 8},
     scores: {
         type: Map,
         key: String,
@@ -19,7 +19,17 @@ const studentSchema = new mongoose.Schema({
         transform: function (doc, ret) {
             ret.id = ret._id;
             delete ret._id;
+            delete ret.password;
             return ret;
+        }
+    },
+    toObject: {
+        virtuals: true,
+        transform: function (doc, ret) {
+           ret.id = ret._id;
+           delete ret._id;
+           delete ret.password;
+           return ret;
         }
     }
 })
