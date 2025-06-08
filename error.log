@@ -291,3 +291,9 @@
 [2025-06-08T18:28:55.967Z] info: Server started on port 8080. Press Ctrl-C to finish
 [2025-06-08T18:29:04.972Z] info: Connected to MongoDB
 [2025-06-08T18:29:04.973Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T18:29:18.000Z] http: ::1 - - [08/Jun/2025:18:29:17 +0000] "POST /auth/login HTTP/1.1" 200 27 "-" "-"
+
+[2025-06-08T18:48:06.744Z] info: Connected to MongoDB
+[2025-06-08T18:48:06.745Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T18:48:15.340Z] http: ::1 - - [08/Jun/2025:18:48:15 +0000] "POST /auth/login HTTP/1.1" 200 27 "-" "-"
+

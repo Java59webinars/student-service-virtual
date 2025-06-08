@@ -1,5 +1,4 @@
 import user from "../model/user.js";
-import User from "../model/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
@@ -27,9 +26,9 @@ export const login = async(req,res)=>{
         return res.status(400).json({error: 'Username and password are required'});
     }
     try {
-        const user = await User.findOne({username});
-        if(!user) return res.status(401).json({error: 'Invalid credentials'});
-        const passwordMatch = await bcrypt.compare(password, user.password);
+        const testUser = await user.findOne({username});
+        if(!testUser) return res.status(401).json({error: 'Invalid credentials'});
+        const passwordMatch = await bcrypt.compare(password, testUser.password);
         if(!passwordMatch) return res.status(400).json({error: 'Invalid credentials'});
         const token = jwt.sign({username},
             process.env.JWT_SECRET || 'mysecret', {expiresIn: '1h'});
