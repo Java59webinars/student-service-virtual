@@ -4,10 +4,12 @@ import mongoose from "mongoose";
 import studentRoutes from "./routes/studentRoutes.js";
 import morgan from "morgan";
 import logger from "./logger/logger.js";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const port = 8080;
 const stream = {
     write: (message) => logger.http(message)
