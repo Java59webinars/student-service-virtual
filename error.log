@@ -239,3 +239,55 @@
 
 [2025-06-08T05:51:34.203Z] http: ::1 - - [08/Jun/2025:05:51:34 +0000] "GET /student/1000 HTTP/1.1" 304 - "http://localhost:5175/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
 
+[2025-06-08T16:32:24.902Z] info: Connected to MongoDB
+[2025-06-08T16:32:24.904Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T16:44:33.158Z] info: Connected to MongoDB
+[2025-06-08T16:44:33.159Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T16:44:45.619Z] http: ::1 - - [08/Jun/2025:16:44:45 +0000] "GET /student/1000 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+
+[2025-06-08T16:46:00.193Z] http: ::1 - - [08/Jun/2025:16:46:00 +0000] "GET /student/1000 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+
+[2025-06-08T16:52:34.193Z] info: Connected to MongoDB
+[2025-06-08T16:52:34.194Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T16:53:18.828Z] info: Connected to MongoDB
+[2025-06-08T16:53:18.829Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:08:12.415Z] info: Connected to MongoDB
+[2025-06-08T17:08:12.417Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:12:32.268Z] info: Connected to MongoDB
+[2025-06-08T17:12:32.270Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:15:17.111Z] info: Connected to MongoDB
+[2025-06-08T17:15:17.112Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:16:45.346Z] info: Connected to MongoDB
+[2025-06-08T17:16:45.347Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:18:05.679Z] info: Connected to MongoDB
+[2025-06-08T17:18:05.681Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:18:32.597Z] info: Connected to MongoDB
+[2025-06-08T17:18:32.598Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:32:00.860Z] info: Connected to MongoDB
+[2025-06-08T17:32:00.861Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:32:05.844Z] http: ::1 - - [08/Jun/2025:17:32:05 +0000] "POST /auth/register HTTP/1.1" 409 34 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-08T17:32:40.601Z] http: ::1 - - [08/Jun/2025:17:32:40 +0000] "POST /auth/register HTTP/1.1" 201 39 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-08T17:33:04.485Z] http: ::1 - - [08/Jun/2025:17:33:04 +0000] "POST /auth/register HTTP/1.1" 409 34 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-08T17:35:52.191Z] info: Connected to MongoDB
+[2025-06-08T17:35:52.192Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T17:36:08.233Z] http: ::1 - - [08/Jun/2025:17:36:08 +0000] "POST /auth/register HTTP/1.1" 400 46 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-08T18:06:12.956Z] info: Connected to MongoDB
+[2025-06-08T18:06:12.958Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T18:06:17.140Z] http: ::1 - - [08/Jun/2025:18:06:17 +0000] "POST /auth/register HTTP/1.1" 201 39 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-08T18:06:37.327Z] http: ::1 - - [08/Jun/2025:18:06:37 +0000] "POST /auth/login HTTP/1.1" 500 39 "-" "-"
+
+[2025-06-08T18:17:49.857Z] info: Connected to MongoDB
+[2025-06-08T18:17:49.858Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T18:18:01.319Z] http: ::1 - - [08/Jun/2025:18:18:01 +0000] "POST /auth/login HTTP/1.1" 200 27 "-" "-"
+
+[2025-06-08T18:20:30.685Z] http: ::1 - - [08/Jun/2025:18:20:30 +0000] "POST /auth/login HTTP/1.1" 200 27 "-" "-"
+
+[2025-06-08T18:28:55.965Z] info: Connected to MongoDB
+[2025-06-08T18:28:55.967Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-08T18:29:04.972Z] info: Connected to MongoDB
+[2025-06-08T18:29:04.973Z] info: Server started on port 8080. Press Ctrl-C to finish
