@@ -23,11 +23,7 @@ export const login = async (req, res) => {
             maxAge: 3600000
         }).json({ message: 'Welcome back!' });
     } catch (error) {
-        res.clearCookie('token', {
-        httpOnly: true,
-        secure: false,
-        sameSite: 'lax'
-    });
+
         res.status(error.code || 500).json({ error: error.message });
     }
 };
