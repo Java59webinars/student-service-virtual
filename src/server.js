@@ -7,6 +7,7 @@ import logger from "./logger/logger.js";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
+import {authenticateToken} from "./services/authService.js";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use(morgan('combined', {stream}));
 app.use(express.json());
 app.use(cookieParser())
 app.use('/auth', authRoutes);
+app.use(authenticateToken);
 app.use(studentRoutes);
 app.use((req, res) => {
     res.status(404).type('text/plain; charset=utf-8').send('Not Found');
