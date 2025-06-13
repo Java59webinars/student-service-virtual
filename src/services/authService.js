@@ -24,7 +24,7 @@ export async function registerUser(username, password) {
 }
 
 export async function loginUser(username, password) {
-    function validateCredentials(victim) {
+    function validateUser(victim) {
         if (!victim) {
             const error = new Error('Invalid credentials');
             error.code = 401;
@@ -32,9 +32,9 @@ export async function loginUser(username, password) {
         }
     }
     const user = await findUserByUsername(username);
-    validateCredentials(user);
+    validateUser(user);
     const match = await bcrypt.compare(password, user.password);
-    validateCredentials(match);
+    validateUser(match);
     logger.info('loginUser', user);
     return jwt.sign({ username }, process.env.JWT_SECRET || 'mysecret', {
         expiresIn: '1h'
