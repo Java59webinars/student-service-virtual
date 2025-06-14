@@ -19,7 +19,6 @@ export async function registerUser(username, password) {
         throw error;
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
     await saveUser({ username, password: hashedPassword });
 }
 
