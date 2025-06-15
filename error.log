@@ -387,3 +387,64 @@
 
 [2025-06-11T17:46:57.642Z] info: Connected to MongoDB
 [2025-06-11T17:46:57.644Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T15:30:22.184Z] info: Connected to MongoDB
+[2025-06-15T15:30:22.188Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T15:31:47.704Z] info: Connected to MongoDB
+[2025-06-15T15:31:47.707Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T16:47:28.684Z] http: ::1 - - [15/Jun/2025:16:47:28 +0000] "POST /auth/register HTTP/1.1" 500 41 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:47:42.652Z] info: Connected to MongoDB
+[2025-06-15T16:47:42.658Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T16:52:06.963Z] info: Connected to MongoDB
+[2025-06-15T16:52:06.966Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T16:52:10.534Z] info: Registering user with username admin: 1234
+[2025-06-15T16:52:10.593Z] http: ::1 - - [15/Jun/2025:16:52:10 +0000] "POST /auth/register HTTP/1.1" 500 41 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:52:41.964Z] info: Connected to MongoDB
+[2025-06-15T16:52:41.971Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T16:52:45.719Z] info: Registering user with username admin: 1234
+[2025-06-15T16:52:45.771Z] http: ::1 - - [15/Jun/2025:16:52:45 +0000] "POST /auth/register HTTP/1.1" 500 41 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:54:15.220Z] info: Connected to MongoDB
+[2025-06-15T16:54:15.226Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T16:54:15.958Z] info: Registering user with username admin: 1234
+[2025-06-15T16:54:16.150Z] http: ::1 - - [15/Jun/2025:16:54:16 +0000] "POST /auth/register HTTP/1.1" 201 39 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:55:42.941Z] http: ::1 - - [15/Jun/2025:16:55:42 +0000] "GET /student/3002 HTTP/1.1" 401 29 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:56:11.823Z] info: loginUser
+[2025-06-15T16:56:11.825Z] http: ::1 - - [15/Jun/2025:16:56:11 +0000] "POST /auth/login HTTP/1.1" 200 27 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:57:05.434Z] http: ::1 - - [15/Jun/2025:16:57:05 +0000] "GET /student/3002 HTTP/1.1" 200 112 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:57:37.275Z] http: ::1 - - [15/Jun/2025:16:57:37 +0000] "GET /student/3000 HTTP/1.1" 404 9 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T16:58:29.292Z] http: ::1 - - [15/Jun/2025:16:58:29 +0000] "POST /student HTTP/1.1" 201 7 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:02:06.447Z] info: Connected to MongoDB
+[2025-06-15T17:02:06.453Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T17:02:09.820Z] http: ::1 - - [15/Jun/2025:17:02:09 +0000] "POST /student HTTP/1.1" 201 7 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:06:33.545Z] info: Connected to MongoDB
+[2025-06-15T17:06:33.554Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T17:06:38.996Z] http: ::1 - - [15/Jun/2025:17:06:38 +0000] "POST /auth/logout HTTP/1.1" 200 37 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:06:53.205Z] http: ::1 - - [15/Jun/2025:17:06:53 +0000] "GET /student/3000 HTTP/1.1" 401 29 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:55:38.405Z] info: Connected to MongoDB
+[2025-06-15T17:55:38.409Z] info: Server started on port 8080. Press Ctrl-C to finish
+[2025-06-15T17:55:58.956Z] info: loginUser
+[2025-06-15T17:55:58.959Z] http: ::1 - - [15/Jun/2025:17:55:58 +0000] "POST /auth/login HTTP/1.1" 200 27 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:56:59.441Z] http: ::1 - - [15/Jun/2025:17:56:59 +0000] "POST /student HTTP/1.1" 403 29 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:57:57.619Z] info: Registering user with username admin: 1234
+[2025-06-15T17:57:57.799Z] http: ::1 - - [15/Jun/2025:17:57:57 +0000] "POST /auth/register HTTP/1.1" 201 39 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:58:56.840Z] info: loginUser
+[2025-06-15T17:58:56.841Z] http: ::1 - - [15/Jun/2025:17:58:56 +0000] "POST /auth/login HTTP/1.1" 200 27 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T17:59:35.112Z] http: ::1 - - [15/Jun/2025:17:59:35 +0000] "POST /student HTTP/1.1" 201 7 "-" "PostmanRuntime/7.44.0"
+
+[2025-06-15T18:06:58.254Z] info: Connected to MongoDB
+[2025-06-15T18:06:58.262Z] info: Server started on port 8080. Press Ctrl-C to finish

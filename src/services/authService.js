@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { findUserByUsername, saveUser } from '../repository/userRepository.js';
 import logger from "../logger/logger.js";
+import accessControl from "../config/accessControl.js";
 
 export function validateCredentials(username, password) {
     if (!username || !password) {
@@ -19,7 +20,7 @@ export async function registerUser(username, password) {
         throw error;
     }
 
-    await saveUser({ username, password: hashedPassword });
+    await saveUser({ username, password });
 }
 
 export async function loginUser(username, password) {
@@ -35,7 +36,7 @@ export async function loginUser(username, password) {
     const match = await bcrypt.compare(password, user.password);
     validateUser(match);
     logger.info('loginUser', user);
-    return jwt.sign({ username }, process.env.JWT_SECRET || 'mysecret', {
+    return jwt.sign({ username: user.username, roles:user.roles }, process.env.JWT_SECRET || 'mysecret', {
         expiresIn: '1h'
     });
 }
@@ -53,4 +54,16 @@ export const authenticateToken = (req,res,next) => {
         req.user = user;
         next();
     })
+}
+
+export const checkPermissions = (action, resource) => {
+    return (req, res, next) => {
+        const roles = req.user?.roles ||[];
+        const permission = roles.some(role =>
+            accessControl.can(role)[action](resource).granted);
+        if (!permission) {
+            return res.status(403).json({error: 'Permission denied'});
+        }
+        next();
+    }
 }

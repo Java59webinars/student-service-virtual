@@ -1,6 +1,8 @@
 import mongoose, {Schema} from "mongoose";
 import Joi from "joi";
 import bcrypt from "bcrypt";
+import {VALID_ROLES} from "../config/accessControl.js";
+
 
 const userSchema = new mongoose.Schema(
     {
@@ -12,6 +14,11 @@ const userSchema = new mongoose.Schema(
         password: {
             type: String,
             required: true,
+        },
+        roles: {
+            type: [String],
+            enum: VALID_ROLES,
+            default: ['USER'],
         }
     }
 )
